@@ -1,0 +1,14 @@
+{
+    "polacode.transparentBackground": true,
+    "polacode.shadow": "rgba(0, 0, 0, 0) ",
+    "polacode.backgroundColor": "#f2f2f2",
+    "polacode.target": "container",
+    "codesnap.backgroundColor": "#FFFFFF",
+    "codesnap.boxShadow": "rgba(0, 0, 0, 0) ",
+    "codesnap.showWindowControls": false,
+    "codesnap.target": "container",
+    "codesnap.containerPadding": "0em",
+    "codesnap.roundedCorners": false,
+    "codesnap.showLineNumbers": false,
+    "codesnap.transparentBackground": true
+}

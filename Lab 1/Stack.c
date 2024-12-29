@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 5
+#define MAX 3
 
 char stack[MAX];
 int top = -1;
@@ -61,7 +61,7 @@ char pop() {
 
 void display() {
     if (top == -1) {
-        printf("Stack Underflow\n\n");
+        printf("Stack Empty\n\n");
         return;
 
     } else {
