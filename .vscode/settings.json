@@ -13,6 +13,7 @@
     "codesnap.transparentBackground": true,
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
-        "LinkedListDelettionDemo.C": "cpp"
+        "LinkedListDelettionDemo.C": "cpp",
+        "BFS.C": "cpp"
     }
 }
