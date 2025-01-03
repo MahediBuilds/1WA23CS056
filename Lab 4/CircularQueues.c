@@ -6,28 +6,29 @@ int front = -1;
 int rear = -1;
 
 void enqueue(int value) {
-    if (rear == MAX - 1) {
+    if ((rear + 1) % MAX == front) {
         printf("Queue Overflow\n\n");
         return;
     }
-    if (front == -1) {
+    if (front == -1) { 
         front = 0;
     }
-    rear++;
+    rear = (rear + 1) % MAX;
     queue[rear] = value;
     printf("Inserted %d\n", value);
     printf("\n");
 }
 
 void dequeue() {
-    if (front == -1 || front > rear) {
+    if (front == -1) {
         printf("Queue Underflow\n\n");
         return;
     }
     printf("Deleted %d\n", queue[front]);
-    front++;
-    if (front > rear) {
+    if (front == rear) { 
         front = rear = -1;
+    } else {
+        front = (front + 1) % MAX;
     }
     printf("\n");
 }
@@ -37,8 +38,14 @@ void display() {
         printf("Queue Empty\n\n");
         return;
     }
-    for (int i = front; i <= rear; i++) {
+    printf("Queue elements: ");
+    int i = front;
+    while (1) {
         printf("%d ", queue[i]);
+        if (i == rear) {
+            break;
+        }
+        i = (i + 1) % MAX;
     }
     printf("\n\n");
 }
@@ -68,5 +75,3 @@ int main() {
         }
     }
 }
-
- 
